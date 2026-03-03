@@ -1,0 +1,425 @@
+{
+  "basic_encounters": [
+    {
+      "title": "A Stranger Approaches",
+      "text": "A wandering cultivator blocks your path. Their aura is sharp, but not overwhelming. They ask for a spar—just one exchange.",
+      "choices": [
+        {
+          "label": "Accept and test their strength",
+          "statKey": "body",
+          "challenge": 16,
+          "successText": "You parry cleanly and force them back. They laugh and toss you a pill before leaving.",
+          "failureText": "Their strike rattles your bones. You retreat with bruises and a lesson learned.",
+          "temporaryBuffOnSuccess": { "body": 2, "qi": 1 },
+          "temporaryBuffOnFailure": { "body": -3, "spirit": -1 }
+        },
+        {
+          "label": "Decline politely and offer tea instead",
+          "statKey": "karma",
+          "challenge": 14,
+          "successText": "They accept. You trade insights and part on good terms.",
+          "failureText": "They scoff and leave, unimpressed. Still, you avoided trouble.",
+          "temporaryBuffOnSuccess": { "spirit": 2, "karma": 2 },
+          "temporaryBuffOnFailure": { "karma": -1 }
+        },
+        {
+          "label": "Try to intimidate them with your aura",
+          "statKey": "qi",
+          "challenge": 17,
+          "successText": "Your Qi flares. They nod in respect and step aside.",
+          "failureText": "Your aura falters. They smirk, and your confidence takes a hit.",
+          "temporaryBuffOnSuccess": { "qi": 2, "karma": -1 },
+          "temporaryBuffOnFailure": { "spirit": -2, "karma": -1 },
+          "qiCost": 1
+        }
+      ]
+    },
+    {
+      "title": "Fork in the Mountain Path",
+      "text": "Two trails split ahead. The left is steep and quiet. The right is wider with distant voices.",
+      "choices": [
+        {
+          "label": "Take the steep, quiet path",
+          "statKey": "spirit",
+          "challenge": 15,
+          "successText": "You find a calm ledge and meditate. Your mind sharpens.",
+          "failureText": "A loose rock sends you sliding. You recover, shaken.",
+          "temporaryBuffOnSuccess": { "spirit": 3, "qi": 1 },
+          "temporaryBuffOnFailure": { "body": -2, "spirit": -1 }
+        },
+        {
+          "label": "Take the wide path and blend in",
+          "statKey": "karma",
+          "challenge": 15,
+          "successText": "Travelers share food and rumors. You gain useful information.",
+          "failureText": "A pickpocket nicks your pouch. You notice too late.",
+          "temporaryBuffOnSuccess": { "karma": 2, "spirit": 1 },
+          "temporaryBuffOnFailure": { "karma": -2 }
+        },
+        {
+          "label": "Leap across the ravine to save time",
+          "statKey": "body",
+          "challenge": 18,
+          "successText": "You land perfectly. Your legs feel stronger.",
+          "failureText": "You barely make it and scrape yourself badly.",
+          "temporaryBuffOnSuccess": { "body": 3 },
+          "temporaryBuffOnFailure": { "body": -4, "spirit": -1 },
+          "permanentBuffOnSuccess": { "maxBody": 1 }
+        }
+      ]
+    },
+    {
+      "title": "A Flickering Spirit Lantern",
+      "text": "An abandoned lantern glows with pale flame. It hums when you get close, like it recognizes your presence.",
+      "choices": [
+        {
+          "label": "Channel Qi into the lantern",
+          "statKey": "qi",
+          "challenge": 15,
+          "successText": "The flame steadies and pours warmth into your meridians.",
+          "failureText": "The lantern spits cold fire, draining you.",
+          "temporaryBuffOnSuccess": { "qi": 4, "spirit": 1 },
+          "temporaryBuffOnFailure": { "qi": -3, "spirit": -2 },
+          "permanentBuffOnSuccess": { "maxQi": 1 },
+          "qiCost": 2
+        },
+        {
+          "label": "Cleanse it with steady breathing",
+          "statKey": "spirit",
+          "challenge": 14,
+          "successText": "Your calm disperses the lingering resentment. The lantern dims peacefully.",
+          "failureText": "The resentment clings. You feel uneasy for a while.",
+          "temporaryBuffOnSuccess": { "spirit": 3, "karma": 1 },
+          "temporaryBuffOnFailure": { "spirit": -1 },
+          "permanentBuffOnSuccess": { "maxSpirit": 1 }
+        },
+        {
+          "label": "Leave it alone",
+          "statKey": "karma",
+          "challenge": 11,
+          "successText": "You pass without incident. Caution has its own reward.",
+          "failureText": "Nothing happens. Still, you wonder what you missed.",
+          "temporaryBuffOnSuccess": { "karma": 1 },
+          "temporaryBuffOnFailure": { "karma": -1 }
+        }
+      ]
+    },
+    {
+      "title": "Bandits on the Road",
+      "text": "Three bandits step out from behind a boulder. Their leader points a blade at you and demands supplies.",
+      "choices": [
+        {
+          "label": "Fight",
+          "statKey": "body",
+          "additionalStatKeys": [ "qi", "spirit" ],
+          "challenge": 18,
+          "successText": "You break their formation and they flee.",
+          "failureText": "You get surrounded and take a beating before escaping.",
+          "temporaryBuffOnSuccess": { "body": 2, "karma": -1 },
+          "temporaryBuffOnFailure": { "body": -5, "spirit": -1 },
+          "qiCost": 1
+        },
+        {
+          "label": "Talk your way out",
+          "statKey": "karma",
+          "challenge": 16,
+          "successText": "You offer a few coins and a story. They let you go.",
+          "failureText": "They laugh and still take what they want.",
+          "temporaryBuffOnSuccess": { "karma": 1, "spirit": 1 },
+          "temporaryBuffOnFailure": { "karma": -3, "spirit": -1 }
+        },
+        {
+          "label": "Release a pressure of Qi and walk through",
+          "statKey": "qi",
+          "challenge": 18,
+          "successText": "Your aura cracks the ground. They stumble away, terrified.",
+          "failureText": "Your Qi sputters. They rush you while you're exposed.",
+          "temporaryBuffOnSuccess": { "qi": 2, "karma": -2 },
+          "temporaryBuffOnFailure": { "body": -3, "qi": -2, "spirit": -1 },
+          "qiCost": 2
+        }
+      ]
+    },
+    {
+      "title": "The Hidden Stone Tablet",
+      "text": "Behind a waterfall you discover a stone tablet carved with ancient cultivation markings. It radiates calm power.",
+      "choices": [
+        {
+          "label": "Study the markings carefully",
+          "statKey": "spirit",
+          "challenge": 15,
+          "successText": "The patterns click into place in your mind. Your foundation stabilizes permanently.",
+          "failureText": "The inscriptions blur and you gain nothing, but you avoid any lasting harm.",
+          "temporaryBuffOnSuccess": { "spirit": 2 },
+          "temporaryBuffOnFailure": { "spirit": -1 },
+          "permanentBuffOnSuccess": { "maxSpirit": 2 }
+        },
+        {
+          "label": "Channel Qi into the tablet",
+          "statKey": "qi",
+          "challenge": 16,
+          "successText": "The tablet hums and your meridians widen. You can hold more Qi than before.",
+          "failureText": "The tablet rejects your Qi, leaving you momentarily drained.",
+          "temporaryBuffOnSuccess": { "qi": 2 },
+          "temporaryBuffOnFailure": { "qi": -2 },
+          "permanentBuffOnSuccess": { "maxQi": 2 }
+        },
+        {
+          "label": "Copy the markings and leave",
+          "statKey": "karma",
+          "challenge": 13,
+          "successText": "You take only knowledge, not power. Still, the act feels auspicious.",
+          "failureText": "You waste time and the ink runs, but you keep your distance from danger.",
+          "temporaryBuffOnSuccess": { "karma": 1 },
+          "temporaryBuffOnFailure": { "karma": -1 },
+          "permanentBuffOnSuccess": { "maxKarma": 1 }
+        }
+      ]
+    },
+    {
+      "title": "Heavenly Lotus Pond",
+      "text": "A small pond glows under moonlight. At its center floats a single lotus with petals like jade. The air smells of life.",
+      "choices": [
+        {
+          "label": "Eat a lotus petal",
+          "statKey": "body",
+          "challenge": 16,
+          "successText": "Warmth spreads through your limbs. Your body becomes tougher—permanently.",
+          "failureText": "Your stomach turns. You spit it out and feel weak for a while.",
+          "temporaryBuffOnSuccess": { "body": 2 },
+          "temporaryBuffOnFailure": { "body": -2 },
+          "permanentBuffOnSuccess": { "maxBody": 2 }
+        },
+        {
+          "label": "Meditate by the pond",
+          "statKey": "spirit",
+          "challenge": 14,
+          "successText": "Your breathing matches the pond's rhythm. Your spirit capacity expands permanently.",
+          "failureText": "Mosquitoes ruin your focus. You leave irritated but intact.",
+          "temporaryBuffOnSuccess": { "spirit": 2 },
+          "temporaryBuffOnFailure": { "spirit": -1 },
+          "permanentBuffOnSuccess": { "maxSpirit": 1, "maxQi": 1 }
+        },
+        {
+          "label": "Offer respect and take only water",
+          "statKey": "karma",
+          "challenge": 12,
+          "successText": "You collect a vial of glowing water. Fortune smiles on restraint.",
+          "failureText": "The water dulls as you scoop it. Still, you caused no offense.",
+          "temporaryBuffOnSuccess": { "karma": 2 },
+          "temporaryBuffOnFailure": { "karma": -1 },
+          "permanentBuffOnSuccess": { "maxKarma": 2 }
+        }
+      ]
+    }
+  ],
+  "special_events": [
+    {
+      "id": "example_event",
+      "name": "Example Special Event",
+      "chance": 0.5,
+      "cooldownDays": 20,
+      "requirements": {
+        "body": 10,
+        "qi": 10,
+        "spirit": 10,
+        "karma": 0,
+        "items": [],
+        "techniques": []
+      },
+      "availableFromDay": 5,
+      "availableToDay": 10,
+      "encounters": []
+    },
+    {
+      "id": "sect_trial",
+      "name": "Sect Trial",
+      "chance": 0.8,
+      "cooldownDays": 30,
+      "requirements": {
+        "zoneId": "sect_gate",
+        "body": 10,
+        "qi": 10,
+        "spirit": 10,
+        "karma": 0,
+        "items": [],
+        "techniques": []
+      },
+      "availableFromDay": 1,
+      "tagsOnSuccess": [ "disciple" ],
+      "encounters": [
+        {
+          "title": "First Gate: The Outer Disciple",
+          "text": "At the sect gate, an outer disciple bars your way. \"Prove your worth,\" they say. \"One exchange—show me your foundation.\"",
+          "choices": [
+            {
+              "label": "Strike with controlled force",
+              "statKey": "body",
+              "additionalStatKeys": [ "qi", "spirit" ],
+              "challenge": 14,
+              "successText": "Your blow is clean. The disciple nods and steps aside.",
+              "failureText": "You overextend; they deflect easily. Still, you learn.",
+              "temporaryBuffOnSuccess": { "body": 2, "qi": 1 },
+              "temporaryBuffOnFailure": { "body": -1 },
+              "qiCost": 1
+            },
+            {
+              "label": "Channel Qi into your palm",
+              "statKey": "qi",
+              "challenge": 14,
+              "successText": "Your Qi flares steadily. They approve.",
+              "failureText": "Your Qi wavers. They shake their head but let you pass.",
+              "temporaryBuffOnSuccess": { "qi": 2, "spirit": 1 },
+              "temporaryBuffOnFailure": { "qi": -1 },
+              "qiCost": 1
+            },
+            {
+              "label": "Bow and ask for guidance",
+              "statKey": "spirit",
+              "challenge": 12,
+              "successText": "Your calm impresses them. They offer a tip before the next trial.",
+              "failureText": "They find you lacking in spirit. You press on anyway.",
+              "temporaryBuffOnSuccess": { "spirit": 2 },
+              "temporaryBuffOnFailure": { "spirit": -1 }
+            }
+          ]
+        },
+        {
+          "title": "Second Gate: The Inner Disciple",
+          "text": "An inner disciple stands at the second gate. \"The first was a warm-up. Here we test your limits.\"",
+          "choices": [
+            {
+              "label": "Fight with everything you have",
+              "statKey": "body",
+              "additionalStatKeys": [ "qi", "spirit" ],
+              "challenge": 18,
+              "successText": "You push through. Your body burns but holds.",
+              "failureText": "They overwhelm you. You stagger but remain standing.",
+              "temporaryBuffOnSuccess": { "body": 3, "qi": 2 },
+              "temporaryBuffOnFailure": { "body": -3, "spirit": -1 },
+              "permanentBuffOnSuccess": { "maxBody": 1 },
+              "qiCost": 2
+            },
+            {
+              "label": "Match their Qi pressure",
+              "statKey": "qi",
+              "challenge": 17,
+              "successText": "Your meridians strain but hold. They respect your resolve.",
+              "failureText": "Your Qi buckles. You recover, humbled.",
+              "temporaryBuffOnSuccess": { "qi": 3 },
+              "temporaryBuffOnFailure": { "qi": -2, "body": -1 },
+              "permanentBuffOnSuccess": { "maxQi": 1 },
+              "qiCost": 2
+            },
+            {
+              "label": "Steady your mind and endure",
+              "statKey": "spirit",
+              "challenge": 15,
+              "successText": "Your spirit does not break. They step aside.",
+              "failureText": "The pressure cracks your focus. You breathe and continue.",
+              "temporaryBuffOnSuccess": { "spirit": 3, "body": 1 },
+              "temporaryBuffOnFailure": { "spirit": -2 },
+              "permanentBuffOnSuccess": { "maxSpirit": 1 },
+              "qiCost": 1
+            }
+          ]
+        },
+        {
+          "title": "Third Gate: The Trial Master",
+          "text": "The Trial Master blocks the final gate. \"Few reach me. Prove you deserve to enter the sect.\" Their aura is formidable.",
+          "choices": [
+            {
+              "label": "Unleash your full power",
+              "statKey": "body",
+              "additionalStatKeys": [ "qi", "spirit" ],
+              "challenge": 20,
+              "successText": "Against the odds, you land a telling blow. The Master smiles. \"Welcome.\"",
+              "failureText": "You are thrown back. The Master helps you up. \"You have heart. Enter.\"",
+              "temporaryBuffOnSuccess": { "body": 2 },
+              "temporaryBuffOnFailure": { "body": -2 },
+              "permanentBuffOnSuccess": { "maxBody": 2, "maxQi": 1 },
+              "permanentBuffOnFailure": { "maxBody": 1 },
+              "qiCost": 3
+            },
+            {
+              "label": "Merge Qi and spirit in one strike",
+              "statKey": "qi",
+              "additionalStatKeys": [ "spirit" ],
+              "challenge": 19,
+              "successText": "Your strike carries both force and intent. The Master nods. \"Well done.\"",
+              "failureText": "You falter at the last moment. \"You are not ready for that technique—but you may enter.\"",
+              "temporaryBuffOnSuccess": { "qi": 2, "spirit": 2 },
+              "temporaryBuffOnFailure": { "qi": -2 },
+              "permanentBuffOnSuccess": { "maxQi": 2, "maxSpirit": 1 },
+              "permanentBuffOnFailure": { "maxQi": 1 },
+              "qiCost": 3
+            },
+            {
+              "label": "Accept the trial and endure",
+              "statKey": "spirit",
+              "challenge": 18,
+              "successText": "Your spirit holds under their pressure. \"You have the will. Enter the sect.\"",
+              "failureText": "You collapse to one knee, then rise. \"Pass. Barely.\"",
+              "temporaryBuffOnSuccess": { "spirit": 3 },
+              "temporaryBuffOnFailure": { "spirit": -1 },
+              "permanentBuffOnSuccess": { "maxSpirit": 2, "maxBody": 1 },
+              "permanentBuffOnFailure": { "maxSpirit": 1, "maxKarma": 1 },
+              "qiCost": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hermit_meeting",
+      "name": "Meet the Hermit",
+      "chance": 1.0,
+      "cooldownDays": 15,
+      "requirements": {
+        "zoneId": "hermit_glade",
+        "body": 0,
+        "qi": 0,
+        "spirit": 0,
+        "karma": 0,
+        "items": [],
+        "techniques": []
+      },
+      "availableFromDay": 1,
+      "encounters": [
+        {
+          "title": "The Hermit's Silence",
+          "text": "In the glade you find an old cultivator sitting under a tree. They do not speak, but their eyes invite you to sit. The air is still; even the birds are quiet.",
+          "choices": [
+            {
+              "label": "Sit and meditate with them",
+              "statKey": "spirit",
+              "challenge": 12,
+              "successText": "Your spirit settles. When you open your eyes, the hermit has left a small jade token by your knee.",
+              "failureText": "Your mind wanders. The hermit smiles faintly and says nothing.",
+              "temporaryBuffOnSuccess": { "spirit": 3, "qi": 1 },
+              "temporaryBuffOnFailure": { "spirit": 1 }
+            },
+            {
+              "label": "Ask for guidance",
+              "statKey": "karma",
+              "challenge": 14,
+              "successText": "They point at the sky, then at your chest. You understand: cultivate with an open heart.",
+              "failureText": "They shake their head gently. Some answers are not spoken.",
+              "temporaryBuffOnSuccess": { "karma": 2, "spirit": 1 },
+              "temporaryBuffOnFailure": { "karma": -1 }
+            },
+            {
+              "label": "Leave quietly",
+              "statKey": "karma",
+              "challenge": 10,
+              "successText": "You bow and retreat. Respect for silence is its own cultivation.",
+              "failureText": "You step on a twig. The hermit's eyes open briefly, then close. You leave, chastened.",
+              "temporaryBuffOnSuccess": { "karma": 1 },
+              "temporaryBuffOnFailure": { }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
