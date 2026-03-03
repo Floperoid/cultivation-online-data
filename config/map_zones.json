@@ -7,12 +7,21 @@
       "name": "Starter Village",
       "info": "A peaceful village at the foot of the mountains. Cultivators often rest here before venturing further.",
       "picture": "village",
-      "x": 0.6,
-      "y": 0.6,
+      "x": 0.55,
+      "y": 0.54,
       "travelOptions": [
-        { "targetZoneId": "forest", "days": 3 },
-        { "targetZoneId": "mountain_pass", "days": 4 },
-        { "targetZoneId": "river_temple", "days": 3 }
+        {
+          "targetZoneId": "forest",
+          "days": 3
+        },
+        {
+          "targetZoneId": "mountain_pass",
+          "days": 4
+        },
+        {
+          "targetZoneId": "river_temple",
+          "days": 3
+        }
       ]
     },
     {
@@ -20,12 +29,21 @@
       "name": "Forest",
       "info": "A dense forest rich in spirit herbs but home to beasts and hidden dangers.",
       "picture": "forest",
-      "x": 0.22,
-      "y": 0.52,
+      "x": 0.341,
+      "y": 0.523,
       "travelOptions": [
-        { "targetZoneId": "village", "days": 3 },
-        { "targetZoneId": "river_temple", "days": 3 },
-        { "targetZoneId": "hermit_glade", "days": 2 }
+        {
+          "targetZoneId": "village",
+          "days": 3
+        },
+        {
+          "targetZoneId": "river_temple",
+          "days": 3
+        },
+        {
+          "targetZoneId": "hermit_glade",
+          "days": 2
+        }
       ]
     },
     {
@@ -33,10 +51,13 @@
       "name": "Hermit's Glade",
       "info": "A secluded clearing where a reclusive cultivator is said to meditate. Few dare to disturb the silence.",
       "picture": "hermit_glade",
-      "x": 0.12,
-      "y": 0.48,
+      "x": 0.275,
+      "y": 0.532,
       "travelOptions": [
-        { "targetZoneId": "forest", "days": 2 }
+        {
+          "targetZoneId": "forest",
+          "days": 2
+        }
       ]
     },
     {
@@ -44,11 +65,17 @@
       "name": "Mountain Pass",
       "info": "A high pass between peaks. The thin air tests body and spirit.",
       "picture": "mountain",
-      "x": 0.95,
-      "y": 0.35,
+      "x": 0.666,
+      "y": 0.491,
       "travelOptions": [
-        { "targetZoneId": "village", "days": 4 },
-        { "targetZoneId": "sect_gate", "days": 2 }
+        {
+          "targetZoneId": "village",
+          "days": 4
+        },
+        {
+          "targetZoneId": "sect_gate",
+          "days": 2
+        }
       ]
     },
     {
@@ -56,10 +83,13 @@
       "name": "River Temple",
       "info": "An ancient temple by the river. Monks and wandering cultivators gather here.",
       "picture": "temple",
-      "x": 0.35,
-      "y": 0.7,
+      "x": 0.441,
+      "y": 0.594,
       "travelOptions": [
-        { "targetZoneId": "forest", "days": 3 }
+        {
+          "targetZoneId": "forest",
+          "days": 3
+        }
       ]
     },
     {
@@ -67,17 +97,55 @@
       "name": "Sect Gate",
       "info": "The outer gate of a major cultivation sect. Many disciples train in the surrounding lands.",
       "picture": "sect_gate",
-      "x": 1.0,
-      "y": 0.25,
+      "x": 0.8,
+      "y": 0.485,
       "travelOptions": [
-        { "targetZoneId": "mountain_pass", "days": 2 }
+        {
+          "targetZoneId": "mountain_pass",
+          "days": 2
+        }
       ],
       "specialOptions": [
-        { "id": "teleport", "requirements": { "requiredTags": ["disciple"] } },
-        { "id": "cultivation_room", "requirements": { "requiredTags": ["disciple"] } },
-        { "id": "market", "requirements": { "requiredTags": ["disciple"] } },
-        { "id": "task_board", "requirements": { "requiredTags": ["disciple"] } },
-        { "id": "workshop", "requirements": { "requiredTags": ["disciple"] } }
+        {
+          "id": "teleport",
+          "requirements": {
+            "requiredTags": [
+              "disciple"
+            ]
+          }
+        },
+        {
+          "id": "cultivation_room",
+          "requirements": {
+            "requiredTags": [
+              "disciple"
+            ]
+          }
+        },
+        {
+          "id": "market",
+          "requirements": {
+            "requiredTags": [
+              "disciple"
+            ]
+          }
+        },
+        {
+          "id": "task_board",
+          "requirements": {
+            "requiredTags": [
+              "disciple"
+            ]
+          }
+        },
+        {
+          "id": "workshop",
+          "requirements": {
+            "requiredTags": [
+              "disciple"
+            ]
+          }
+        }
       ]
     }
   ]
