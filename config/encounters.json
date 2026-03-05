@@ -6,7 +6,7 @@
       "choices": [
         {
           "label": "Accept and test their strength",
-          "statKey": "body",
+          "statKey": "power",
           "challenge": 16,
           "successText": "You parry cleanly and force them back. They laugh and toss you a pill before leaving.",
           "failureText": "Their strike rattles your bones. You retreat with bruises and a lesson learned.",
@@ -167,11 +167,7 @@
       "choices": [
         {
           "label": "Fight",
-          "statKey": "body",
-          "additionalStatKeys": [
-            "qi",
-            "spirit"
-          ],
+          "statKey": "power",
           "challenge": 18,
           "successText": "You break their formation and they flee.",
           "failureText": "You get surrounded and take a beating before escaping.",
@@ -216,6 +212,38 @@
             "spirit": -1
           },
           "qiCost": 2
+        }
+      ]
+    },
+    {
+      "title": "A Discarded Blade",
+      "text": "In the undergrowth you spot something metallic—a short blade, worn and rusted but still solid. It looks like it was dropped long ago.",
+      "choices": [
+        {
+          "label": "Take the blade",
+          "statKey": "body",
+          "challenge": 5,
+          "successText": "You free the dagger from the vines and slip it into your belt. It's nothing fancy, but it'll do.",
+          "failureText": "The blade catches on a root; you cut your hand and leave it behind.",
+          "temporaryBuffOnFailure": {
+            "body": -2
+          },
+          "itemsOnSuccess": [
+            "rusty_dagger"
+          ],
+          "itemsOnFailure": [
+            "rusty_dagger"
+          ]
+        },
+        {
+          "label": "Leave it alone",
+          "statKey": "karma",
+          "challenge": 2,
+          "successText": "You walk on. Taking what isn't yours brings no honor.",
+          "failureText": "You hesitate, then move on. The blade stays in the dirt.",
+          "temporaryBuffOnSuccess": {
+            "karma": 1
+          }
         }
       ]
     },
@@ -372,11 +400,7 @@
           "choices": [
             {
               "label": "Strike with controlled force",
-              "statKey": "body",
-              "additionalStatKeys": [
-                "qi",
-                "spirit"
-              ],
+              "statKey": "power",
               "challenge": 14,
               "successText": "Your blow is clean. The disciple nods and steps aside.",
               "failureText": "You overextend; they deflect easily. Still, you learn.",
@@ -425,11 +449,7 @@
           "choices": [
             {
               "label": "Fight with everything you have",
-              "statKey": "body",
-              "additionalStatKeys": [
-                "qi",
-                "spirit"
-              ],
+              "statKey": "power",
               "challenge": 18,
               "successText": "You push through. Your body burns but holds.",
               "failureText": "They overwhelm you. You stagger but remain standing.",
@@ -490,11 +510,7 @@
           "choices": [
             {
               "label": "Unleash your full power",
-              "statKey": "body",
-              "additionalStatKeys": [
-                "qi",
-                "spirit"
-              ],
+              "statKey": "power",
               "challenge": 20,
               "successText": "Against the odds, you land a telling blow. The Master smiles. \"Welcome.\"",
               "failureText": "You are thrown back. The Master helps you up. \"You have heart. Enter.\"",
@@ -515,10 +531,7 @@
             },
             {
               "label": "Merge Qi and spirit in one strike",
-              "statKey": "qi",
-              "additionalStatKeys": [
-                "spirit"
-              ],
+              "statKey": "power",
               "challenge": 19,
               "successText": "Your strike carries both force and intent. The Master nods. \"Well done.\"",
               "failureText": "You falter at the last moment. \"You are not ready for that technique—but you may enter.\"",

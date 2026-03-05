@@ -6,13 +6,16 @@
       "category": "weapon",
       "icon": "rusty_dagger",
       "equipSlot": "WEAPON",
-      "stackable": false
+      "stackable": false,
+      "description": "A worn blade, still serviceable.",
+      "price": 0.1,
+      "power": 1
     },
     {
       "id": "traveler_robe",
       "name": "Traveler's Robe",
       "category": "armor",
-      "icon": "",
+      "icon": "traveler_robe",
       "equipSlot": "BODY",
       "stackable": false
     },
@@ -20,7 +23,7 @@
       "id": "spirit_amulet",
       "name": "Spirit Amulet",
       "category": "accessory",
-      "icon": "",
+      "icon": "spirit_amulet",
       "equipSlot": "ACCESSORY",
       "stackable": false
     },
@@ -39,7 +42,7 @@
       "id": "herb_bundle",
       "name": "Herb Bundle",
       "category": "material",
-      "icon": "",
+      "icon": "herb_bundle",
       "stackable": true
     }
   ]
