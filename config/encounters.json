@@ -1,6 +1,154 @@
 {
   "basic_encounters": [
     {
+      "title": "A Chasm Blocks the Path",
+      "weight": 4,
+      "text": "Ten more li ahead, the path is cut by a chasm. The other side is within reach, but the jump is no joke. The wind tugs at your robes.",
+      "choices": [
+        {
+          "label": "Jump across with raw strength",
+          "statKey": "body",
+          "challenge": 14,
+          "successText": "You make it, but the landing jars your legs. You walk it off and press on.",
+          "failureText": "You fall short and scrape along the far edge. You pull yourself up, bruised.",
+          "temporaryBuffOnSuccess": {
+            "body": -2
+          },
+          "temporaryBuffOnFailure": {
+            "body": -4,
+            "spirit": -1
+          }
+        },
+        {
+          "label": "Channel Qi and leap",
+          "statKey": "qi",
+          "challenge": 12,
+          "successText": "Qi surges through your legs. You clear the gap and land light.",
+          "failureText": "Your Qi wavers mid-leap. You grab the far ledge and haul yourself over, drained.",
+          "temporaryBuffOnSuccess": {
+            "qi": -1
+          },
+          "temporaryBuffOnFailure": {
+            "qi": -3,
+            "body": -1
+          },
+          "qiCost": 2
+        },
+        {
+          "label": "Search for a way around",
+          "statKey": "karma",
+          "challenge": 13,
+          "successText": "You find a narrow ledge and a fallen log. You cross carefully, but the detour costs you.",
+          "failureText": "You slip on loose rock and take a knock. No shortcut this time.",
+          "temporaryBuffOnSuccess": {
+            "body": -2
+          },
+          "temporaryBuffOnFailure": {
+            "body": -3,
+            "spirit": -1
+          }
+        }
+      ]
+    },
+    {
+      "title": "Ten Li of Broken Road",
+      "weight": 5,
+      "text": "The road ahead is rough—rocks, roots, and long stretches of uneven ground. Another ten li of this will take its toll unless you pace yourself.",
+      "choices": [
+        {
+          "label": "Push through at full speed",
+          "statKey": "body",
+          "challenge": 14,
+          "successText": "You push hard and cover ground. By the end your legs burn but you're still standing.",
+          "failureText": "You overdo it. Your body protests; you slow down and nurse your aches.",
+          "temporaryBuffOnSuccess": {
+            "body": -1
+          },
+          "temporaryBuffOnFailure": {
+            "body": -4,
+            "qi": -1
+          }
+        },
+        {
+          "label": "Steady pace, mind clear",
+          "statKey": "spirit",
+          "challenge": 12,
+          "successText": "You keep your breath even and your mind calm. The miles pass without draining you.",
+          "failureText": "The monotony gets to you. You arrive a bit worn and scattered.",
+          "temporaryBuffOnSuccess": {
+            "spirit": 1
+          },
+          "temporaryBuffOnFailure": {
+            "spirit": -2
+          }
+        },
+        {
+          "label": "Use Qi to lighten your steps",
+          "statKey": "qi",
+          "challenge": 13,
+          "successText": "A trickle of Qi into your legs eases the way. You reach the end of the stretch still fresh.",
+          "failureText": "You waste Qi without finding the right flow. You finish tired and a little frustrated.",
+          "temporaryBuffOnSuccess": {
+            "qi": 1
+          },
+          "temporaryBuffOnFailure": {
+            "qi": -2,
+            "body": -1
+          },
+          "qiCost": 1
+        }
+      ]
+    },
+    {
+      "title": "Long Road Under the Sun",
+      "weight": 3,
+      "text": "The path runs on under a harsh sun. No shade for li. Your throat is dry and your mind starts to drift. A few more li and you can rest.",
+      "choices": [
+        {
+          "label": "Endure the heat",
+          "statKey": "body",
+          "challenge": 13,
+          "successText": "You tough it out. When you finally stop, you're spent but unharmed.",
+          "failureText": "The heat wins. You stagger to the next patch of shade and recover slowly.",
+          "temporaryBuffOnSuccess": {
+            "body": -2
+          },
+          "temporaryBuffOnFailure": {
+            "body": -3,
+            "spirit": -1
+          }
+        },
+        {
+          "label": "Focus inward and ignore the discomfort",
+          "statKey": "spirit",
+          "challenge": 14,
+          "successText": "You detach from the heat. The road passes in a kind of trance.",
+          "failureText": "Your focus slips. The sun and thirst nag at you the rest of the way.",
+          "temporaryBuffOnSuccess": {
+            "spirit": -1
+          },
+          "temporaryBuffOnFailure": {
+            "spirit": -3,
+            "body": -1
+          }
+        },
+        {
+          "label": "Spend Qi to cool your meridians",
+          "statKey": "qi",
+          "challenge": 12,
+          "successText": "A hint of cool Qi through your core takes the edge off. You finish the stretch in decent shape.",
+          "failureText": "You fumble the technique. You're a bit more drained than before.",
+          "temporaryBuffOnSuccess": {
+            "qi": -1
+          },
+          "temporaryBuffOnFailure": {
+            "qi": -2
+          },
+          "qiCost": 1
+        }
+      ]
+    },
+    {
       "title": "A Stranger Approaches",
       "text": "A wandering cultivator blocks your path. Their aura is sharp, but not overwhelming. They ask for a spar—just one exchange.",
       "choices": [
