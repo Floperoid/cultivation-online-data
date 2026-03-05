@@ -359,6 +359,47 @@
   ],
   "special_events": [
     {
+      "id": "village_breathing",
+      "name": "Elder's Breathing Lesson",
+      "chance": 1.0,
+      "cooldownDays": 5,
+      "requirements": {
+        "zoneId": "village",
+        "body": 0,
+        "qi": 0,
+        "spirit": 0,
+        "karma": 0,
+        "items": [],
+        "techniques": []
+      },
+      "availableFromDay": 1,
+      "encounters": [
+        {
+          "title": "Elder's Breathing Lesson",
+          "text": "A village elder notices you and offers to teach you a basic breathing technique. \"Steady breath steadies the body. Sit with me a moment.\"",
+          "choices": [
+            {
+              "label": "Sit and follow their guidance",
+              "statKey": "spirit",
+              "challenge": 8,
+              "successText": "You find a calm rhythm. The elder nods. \"You have the foundation. Practice it whenever you rest—it will serve you well.\"",
+              "failureText": "Your mind wanders, but the elder still shares the basics. \"Keep practicing. It will come.\"",
+              "temporaryBuffOnSuccess": {
+                "spirit": 1,
+                "qi": 1
+              },
+              "temporaryBuffOnFailure": {
+                "spirit": 1
+              },
+              "technicsOnSuccess": [
+                "basic_breathing"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "example_event",
       "name": "Example Special Event",
       "chance": 0.5,

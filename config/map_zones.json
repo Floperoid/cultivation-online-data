@@ -9,6 +9,12 @@
       "picture": "village",
       "x": 0.55,
       "y": 0.54,
+      "specialOptions": [
+        {
+          "id": "free_cultivation",
+          "requirements": {}
+        }
+      ],
       "travelOptions": [
         {
           "targetZoneId": "forest",
@@ -31,6 +37,12 @@
       "picture": "forest",
       "x": 0.341,
       "y": 0.523,
+      "specialOptions": [
+        {
+          "id": "free_cultivation",
+          "requirements": {}
+        }
+      ],
       "travelOptions": [
         {
           "targetZoneId": "village",
