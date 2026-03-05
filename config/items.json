@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "rusty_dagger",
+      "name": "Rusty Dagger",
+      "category": "weapon",
+      "icon": "rusty_dagger",
+      "equipSlot": "WEAPON",
+      "stackable": false
+    },
+    {
+      "id": "traveler_robe",
+      "name": "Traveler's Robe",
+      "category": "armor",
+      "icon": "",
+      "equipSlot": "BODY",
+      "stackable": false
+    },
+    {
+      "id": "spirit_amulet",
+      "name": "Spirit Amulet",
+      "category": "accessory",
+      "icon": "",
+      "equipSlot": "ACCESSORY",
+      "stackable": false
+    },
+    {
+      "id": "qi_pill",
+      "name": "Qi Restoration Pill",
+      "category": "consumable",
+      "icon": "qi_restoration_pill",
+      "stackable": true,
+      "description": "A pill that gently stabilizes and expands one's Qi channels. Commonly used after cultivation sessions.",
+      "price": 0.5,
+      "effect": "Permanent +0.1 Max Qi",
+      "effectMaxQi": 0.1
+    },
+    {
+      "id": "herb_bundle",
+      "name": "Herb Bundle",
+      "category": "material",
+      "icon": "",
+      "stackable": true
+    }
+  ]
+}
