@@ -642,7 +642,7 @@
               "label": "Sit and meditate with them",
               "statKey": "spirit",
               "challenge": 12,
-              "successText": "Your spirit settles. When you open your eyes, the hermit has left a small jade token by your knee.",
+              "successText": "Your spirit settles. When you open your eyes, you feel the forest around you breathe.",
               "failureText": "Your mind wanders. The hermit smiles faintly and says nothing.",
               "temporaryBuffOnSuccess": {
                 "spirit": 3,
@@ -650,7 +650,10 @@
               },
               "temporaryBuffOnFailure": {
                 "spirit": 1
-              }
+              },
+              "technicsOnSuccess": [
+                "forest_meditation"
+              ]
             },
             {
               "label": "Ask for guidance",
@@ -664,7 +667,10 @@
               },
               "temporaryBuffOnFailure": {
                 "karma": -1
-              }
+              },
+              "technicsOnSuccess": [
+                "forest_meditation"
+              ]
             },
             {
               "label": "Leave quietly",

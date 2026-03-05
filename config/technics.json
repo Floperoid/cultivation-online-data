@@ -1,0 +1,34 @@
+{
+  "technics": [
+    {
+      "id": "basic_breathing",
+      "name": "Basic Breathing",
+      "description": "A foundational technique that steadies the breath and gently strengthens the body.",
+      "rarity": "common",
+      "type": "body",
+      "cooldownDays": 1,
+      "maxCultivate": 3,
+      "effectMaxBody": 0.1,
+      "effectMaxSpirit": 0,
+      "effectMaxQi": 0,
+      "effectMaxKarma": 0
+    },
+    {
+      "id": "forest_meditation",
+      "name": "Forest Meditation",
+      "description": "A technique that harmonizes with the energy of wooded places. More effective in forests.",
+      "rarity": "common",
+      "type": "spirit",
+      "cooldownDays": 3,
+      "maxCultivate": 2,
+      "effectMaxBody": 0,
+      "effectMaxSpirit": 0.1,
+      "effectMaxQi": 0.1,
+      "effectMaxKarma": 0.1,
+      "zoneBonus": {
+        "forest": 1.5,
+        "hermit_glade": 1.2
+      }
+    }
+  ]
+}
