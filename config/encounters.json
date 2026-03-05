@@ -17,7 +17,10 @@
           "temporaryBuffOnFailure": {
             "body": -3,
             "spirit": -1
-          }
+          },
+          "itemsOnSuccess": [
+            "qi_pill"
+          ]
         },
         {
           "label": "Decline politely and offer tea instead",
